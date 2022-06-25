@@ -43,6 +43,4 @@ COPY target/DBServer-1.0-SNAPSHOT.jar $WORK/target/
 
 WORKDIR $WORK
 
-EXPOSE 8080
-
 CMD service postgresql start && java -jar target/DBServer-1.0-SNAPSHOT.jar application.Application --database=jdbc:postgresql://localhost5432/docker --username=docker --password=docker
